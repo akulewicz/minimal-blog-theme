@@ -26,7 +26,7 @@ const updateUI = (data) => {
   let article = `
     <article class="post">
         <img class="post__image" src="${image.source_url}">
-        <div>
+        <div class="post__content">
         <p class="post__info">Kategoria | Mar 18, 2020</p>
         <h3 class="post__title">${content.title.rendered}</h3>
         <div class="post__excerpt">${content.excerpt.rendered}</div>

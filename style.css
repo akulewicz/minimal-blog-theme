@@ -61,7 +61,7 @@ h6 {
 .posts {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 50px;
+  grid-column-gap: 60px;
   grid-row-gap: 70px;
   width: 100%;
 }
@@ -76,7 +76,12 @@ h6 {
   grid-column-end: -1;
   display: grid;
   grid-template-columns: 2fr 1fr;
-  grid-gap: 50px;
+  grid-gap: 40px;
+  padding-right: 40px;
+}
+
+.post:first-of-type .post__content {
+    margin-top: 16px;
 }
 
 .post__image {
@@ -85,7 +90,7 @@ h6 {
 
 .post__info {
   color: #7b7b7b;
-  font-size: 11px;
+  font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -99,14 +104,19 @@ h6 {
 }
 
 .post:first-of-type .post__title {
-  font-size: 30px;
+  font-size: 36px;
+  line-height: 1.2;
   color: rgb(15, 15, 15);
 }
 
+.post__content {
+    padding: 0 10px;
+}
+
 .post__excerpt {
-  font-family: "Inter", sans-serif;
+  font-family: "Lato", sans-serif;
   color: rgb(48, 48, 48);
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 300;
-  line-height: 22px;
+  line-height: 1.5;
 }
