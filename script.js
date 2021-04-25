@@ -27,7 +27,7 @@ const updateUI = (data) => {
     <article class="post">
         <img class="post__image" src="${image.source_url}">
         <div class="post__content">
-        <p class="post__info">Kategoria | Mar 18, 2020</p>
+        <p class="post__info"><a class="post__category" href="#">Kategoria</a>  Mar 18, 2020</p>
         <h3 class="post__title">${content.title.rendered}</h3>
         <div class="post__excerpt">${content.excerpt.rendered}</div>
         </div>
