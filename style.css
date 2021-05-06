@@ -156,16 +156,6 @@ h6 {
       grid-template-columns: 1fr;
       grid-gap: 0;
       padding: 0; } }
-  .post--first .post__title {
-    font-size: 36px;
-    line-height: 1.2;
-    color: #0f0f0f; }
-    @media (max-width: 1300px) {
-      .post--first .post__title {
-        font-size: 32px; } }
-    @media (max-width: 1024px) {
-      .post--first .post__title {
-        font-size: 28px; } }
 
 .post__image {
   max-width: 100%;

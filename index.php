@@ -10,7 +10,7 @@
                     </div>
                     <div class="post__content--first">
                         <p class="post__info"><a class="post__category--first" href="#">Kategoria</a> Mar 18, 2020</p>
-                        <h2 class="post__title"><?php the_title() ?></h2>
+                        <h2 class="post__title--first"><?php the_title() ?></h2>
                         <div class="post__excerpt"><?php echo wp_trim_words(get_the_excerpt(), 30) ?></div>
                     </div>
                 </article>
