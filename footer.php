@@ -1,47 +1,4 @@
-<!DOCTYPE html>
-<html lang="pl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Poruszeni.pl</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="normalize.css" />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header class="header">
-      <button class="hamburger hamburger--js"><i class="fas fa-bars"></i></button>
-      <nav class="top-navigation top-navigation--js">
-        <ul class="top-navigation__list">
-          <li class="top-navigation__item">
-            <a class="top-navigation__link" href="#">Strona główna</a>
-          </li>
-          <li class="top-navigation__item">
-            <a class="top-navigation__link" href="#">Rowery</a>
-          </li>
-          <li class="top-navigation__item">
-            <a class="top-navigation__link" href="#">O mnie</a>
-          </li>
-          <li class="top-navigation__item">
-            <a class="top-navigation__link" href="#">Kontakt</a>
-          </li>
-         
-        </ul>
-      </nav>
-      <h1 class="header__title">Poruszeni.pl</h1>
-    </header>
-    <main class="main">
-      <section class="posts posts--js">
-
-      </section>
-    </main>
-    <footer class="footer">
+<footer class="footer">
       <div class="footer-container">
         <section class="links">
           <h3 class="footer__title">Przydatne linki</h3>
@@ -64,7 +21,7 @@
 
         <section class="author">
           <h3 class="footer__title">O mnie</h3>
-          <img class="author__image" src="/images/author.png" alt="" />
+          <img class="author__image" src="<?php echo get_theme_file_uri('images/author.png'); ?>" />
           <p class="author__name">Arkadiusz Kulewicz</p>
           <p class="author__description">
             Autor bloga poruszeni.pl. Wielbiciel podróży oraz wszelkich form
@@ -121,7 +78,6 @@
         <p class="copy__text">&copy; Poruszeni.pl, 2021 r.</p>
       </div>
     </footer>
-    <script src="script.js"></script>
-    <script src="api.js"></script>
+    <?php wp_footer(); ?>
   </body>
 </html>

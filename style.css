@@ -1,4 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,700&family=Roboto+Slab:wght@300;400;500;700&family=Inter:wght@300;500&display=swap");
+/*
+Theme Name: Minimal Blog Theme
+Author: Arkadiusz Kulewicz
+Version: 1.0
+*/
 * {
   box-sizing: border-box; }
 
@@ -43,6 +47,9 @@ h6 {
     @media (max-width: 300px) {
       .header__title {
         font-size: 45px; } }
+  .header__home-link {
+    color: #0f0f0f;
+    text-decoration: none; }
 
 .hamburger {
   display: none;
@@ -136,7 +143,7 @@ h6 {
   .posts__category {
     grid-area: 1 / -1; }
 
-.post:first-of-type {
+.post--first {
   background-color: #f5f5f5;
   grid-column-start: 1;
   grid-column-end: -1;
@@ -145,33 +152,24 @@ h6 {
   grid-gap: 40px;
   padding-right: 40px; }
   @media (max-width: 1024px) {
-    .post:first-of-type {
+    .post--first {
       grid-template-columns: 1fr;
       grid-gap: 0;
       padding: 0; } }
-  .post:first-of-type .post__content {
-    margin-top: 16px; }
-  .post:first-of-type .post__category {
-    background: #b02626;
-    color: #fff;
-    padding: 3px 5px;
-    margin-top: 16px;
-    transition: background-color 0.3s; }
-  .post:first-of-type .post__category:hover {
-    background-color: #962121; }
-  .post:first-of-type .post__title {
+  .post--first .post__title {
     font-size: 36px;
     line-height: 1.2;
     color: #0f0f0f; }
     @media (max-width: 1300px) {
-      .post:first-of-type .post__title {
+      .post--first .post__title {
         font-size: 32px; } }
     @media (max-width: 1024px) {
-      .post:first-of-type .post__title {
+      .post--first .post__title {
         font-size: 28px; } }
 
 .post__image {
-  max-width: 100%; }
+  max-width: 100%;
+  height: auto; }
 
 .post__info {
   color: #3a3a3a;
@@ -183,12 +181,23 @@ h6 {
   text-decoration: none;
   color: #b02626;
   margin-right: 10px; }
+  .post__category--first {
+    text-decoration: none;
+    background: #b02626;
+    color: #fff;
+    padding: 3px 5px;
+    margin-top: 16px;
+    transition: background-color 0.3s; }
+    .post__category--first:hover {
+      background-color: #962121; }
 
 .post__category:hover {
   color: #962121; }
 
 .post__content {
   padding: 0 10px; }
+  .post__content--first {
+    margin-top: 16px; }
 
 .post__title {
   color: #303030;
@@ -199,6 +208,16 @@ h6 {
   @media (max-width: 640px) {
     .post__title {
       margin: 16px 0; } }
+  .post__title--first {
+    font-size: 36px;
+    line-height: 1.2;
+    color: #0f0f0f; }
+    @media (max-width: 1300px) {
+      .post__title--first {
+        font-size: 32px; } }
+    @media (max-width: 1024px) {
+      .post__title--first {
+        font-size: 28px; } }
 
 .post__excerpt {
   font-family: "Lato", sans-serif;
