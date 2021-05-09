@@ -8,8 +8,16 @@
     <?php wp_head(); ?>
   </head>
   <body>
+    <div class="search-box">
+    <button class="search-box__close"><i class="fas fa-times"></i></button>
+    <form class="search-form" action="/" method="get">
+    <input class="search-form__input" type="text" name="s" id="search" placeholder="Wpisz szukaną frazę" />
+    <button class="search-form__button"><i class="fas fa-search search-form__icon"></i></button>
+</form>
+    </div>
     <header class="header">
       <button class="hamburger hamburger--js"><i class="fas fa-bars"></i></button>
+      <button class="search-button"><i class="fas fa-search"></i></button>
       <nav class="top-navigation top-navigation--js">
         
         <?php wp_nav_menu(array(
