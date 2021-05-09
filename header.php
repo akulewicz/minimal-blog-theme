@@ -11,8 +11,13 @@
     <header class="header">
       <button class="hamburger hamburger--js"><i class="fas fa-bars"></i></button>
       <nav class="top-navigation top-navigation--js">
-        <ul class="top-navigation__list">
-          <li class="top-navigation__item">
+        
+        <?php wp_nav_menu(array(
+          'theme_location' => 'header-menu',
+          'container' => 'ul',
+          'menu_class' => 'top-navigation__list'
+          )); ?>
+          <!-- <li class="top-navigation__item">
             <a class="top-navigation__link" href="#">Strona główna</a>
           </li>
           <li class="top-navigation__item">
@@ -23,9 +28,9 @@
           </li>
           <li class="top-navigation__item">
             <a class="top-navigation__link" href="#">Kontakt</a>
-          </li>
+          </li> -->
          
-        </ul>   
+        <!-- </ul>    -->
       </nav>
       <h1 class="header__title"><a class="header__home-link" href="<?php echo site_url('');?>"><?php bloginfo('name'); ?></a></h1>
     </header>

@@ -12,8 +12,29 @@ function minimal_files() {
 add_action('wp_enqueue_scripts', 'minimal_files');
 
 function minimal_features() {
+    register_nav_menu('header-menu', 'Header Menu');
     add_theme_support('title-tag');
     add_theme_support('post-thumbnails');
 }
 
 add_action('after_setup_theme', 'minimal_features');
+
+function minimal_header_menu_li_class( $classes, $item, $args ) {
+    if( $args->theme_location == 'header-menu') {
+        $classes[] = 'top-navigation__item';
+    }
+    return $classes;
+
+}
+
+add_filter('nav_menu_css_class', 'minimal_header_menu_li_class', 1, 3);
+
+function minimal_header_menu_a_class( $atts, $item, $args ) {
+    if( $args->theme_location == 'header-menu' ) {
+      $atts['class'] = 'top-navigation__link';
+    }
+    return $atts;
+}
+
+add_filter( 'nav_menu_link_attributes', 'minimal_header_menu_a_class', 1, 3 );
+
