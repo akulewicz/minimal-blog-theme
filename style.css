@@ -82,13 +82,16 @@ h6 {
 
 .search-box {
   display: flex;
+  opacity: 0;
   justify-content: center;
   padding: 200px 30px 30px;
   position: fixed;
   width: 100vw;
   height: 100vh;
   background: rgba(20, 20, 20, 0.945);
-  z-index: 1000; }
+  z-index: 1000;
+  visibility: hidden;
+  transition: all 0.5s; }
   .search-box__close {
     position: absolute;
     top: 40px;
@@ -98,6 +101,9 @@ h6 {
     color: rgba(255, 255, 255, 0.829);
     font-size: 32px;
     cursor: pointer; }
+  .search-box--visible {
+    visibility: visible;
+    opacity: 1; }
 
 .search-form {
   display: flex;
