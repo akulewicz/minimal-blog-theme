@@ -101,6 +101,9 @@ h6 {
     color: rgba(255, 255, 255, 0.829);
     font-size: 32px;
     cursor: pointer; }
+    @media (max-width: 1024px) {
+      .search-box__close {
+        right: 30px; } }
   .search-box--visible {
     visibility: visible;
     opacity: 1; }

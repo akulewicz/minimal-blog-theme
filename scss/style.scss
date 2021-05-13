@@ -110,6 +110,9 @@ h6 {
     color: rgba(255, 255, 255, 0.829);
     font-size: 32px;
     cursor: pointer;
+    @media (max-width: 1024px) {
+      right: 30px;
+    }
   }
   &--visible {
     visibility: visible;
