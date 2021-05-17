@@ -16,7 +16,7 @@
                                     <a class="post__category--first" href="<?= get_category_link($category->cat_ID); ?>"><?= $category->category_nicename; ?></a>
                                 <?php endforeach; ?> Mar 18, 2020
                             </p>
-                            <h2 class="post__title--first"><?php the_title() ?></h2>
+                            <h2 class="post__title--first"><a class="post__hiperlink" href="<?php the_permalink(); ?>"><?php the_title() ?></a></h2>
                             <div class="post__excerpt"><?php echo wp_trim_words(get_the_excerpt(), 30) ?></div>
                         </div>
                     </article>
@@ -33,8 +33,8 @@
                                     <a class="post__category" href="<?= get_category_link($category->cat_ID); ?>"><?= $category->category_nicename . ' '; ?></a>
                                 <?php endforeach; ?> Mar 18, 2020
                             </p>
-                            <h2 class="post__title"><?php the_title() ?></h2>
-                            <div class="post__excerpt"><?php echo wp_trim_words(get_the_excerpt(), 30) ?></div>
+                            <h2 class="post__title"><a class="post__hiperlink" href="<?php the_permalink(); ?>"><?php the_title() ?></a></h2>
+                            <div class="post__excerpt"><?php echo wp_trim_words(get_the_excerpt(), 24) ?></div>
                         </div>
                     </article>
 

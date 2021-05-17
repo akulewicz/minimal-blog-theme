@@ -247,7 +247,6 @@ h6 {
     color: #fff;
     padding: 3px 5px;
     margin-top: 16px;
-    margin-right: 10px;
     transition: background-color 0.3s; }
     .post__category--first:hover {
       background-color: #962121; }
@@ -279,6 +278,13 @@ h6 {
     @media (max-width: 1024px) {
       .post__title--first {
         font-size: 28px; } }
+
+.post__hiperlink {
+  text-decoration: none;
+  color: #303030;
+  transition: color 0.2s; }
+  .post__hiperlink:hover {
+    color: #0061A6; }
 
 .post__excerpt {
   font-family: "Lato", sans-serif;

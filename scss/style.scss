@@ -314,6 +314,14 @@ h6 {
       }
     }
   }
+  &__hiperlink {
+    text-decoration: none;
+    color: rgb(48, 48, 48);
+    transition: color 0.2s;
+    &:hover {
+      color: #0061A6;
+    }
+  }
   &__excerpt {
     font-family: "Lato", sans-serif;
     color: rgb(32, 32, 32);
