@@ -3,19 +3,13 @@
         <section class="links">
           <h3 class="footer__title">Przydatne linki</h3>
           <nav class="footer-navigation">
-            <ul class="footer-navigation__list">
-              <li class="footer-navigation__item">
-                <a class="footer-navigation__link" href="#"
-                  >Polityka prywatności</a
-                >
-              </li>
-              <li class="footer-navigation__item">
-                <a class="footer-navigation__link" href="#">Kontakt</a>
-              </li>
-              <li class="footer-navigation__item">
-                <a class="footer-navigation__link" href="#">Wycieczki</a>
-              </li>
-            </ul>
+
+          <?php wp_nav_menu(array(
+            'theme_location' => 'footer-left-menu',
+            'container' => 'ul',
+            'menu_class' => 'footer-navigation__list'
+      )); ?>
+      
           </nav>
         </section>
 
@@ -60,17 +54,13 @@
         <section class="categories">
           <h3 class="footer__title">Kategorie</h3>
           <nav class="footer-navigation">
-            <ul class="footer-navigation__list">
-              <li class="footer-navigation__item">
-                <a class="footer-navigation__link" href="#">Rower</a>
-              </li>
-              <li class="footer-navigation__item">
-                <a class="footer-navigation__link" href="#">Bieganie</a>
-              </li>
-              <li class="footer-navigation__item">
-                <a class="footer-navigation__link" href="#">Wycieczki</a>
-              </li>
-            </ul>
+
+          <?php wp_nav_menu(array(
+          'theme_location' => 'footer-right-menu',
+          'container' => 'ul',
+          'menu_class' => 'footer-navigation__list'
+      )); ?>
+            
           </nav>
         </section>
       </div>

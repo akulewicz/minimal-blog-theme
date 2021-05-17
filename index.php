@@ -13,7 +13,7 @@
                         <div class="post__content--first">
                             <p class="post__info">
                                 <?php foreach ((get_the_category()) as $category) : ?>
-                                    <a class="post__category--first" href="<?= get_category_link($category->cat_ID); ?>"><?= $category->category_nicename . ' '; ?></a>
+                                    <a class="post__category--first" href="<?= get_category_link($category->cat_ID); ?>"><?= $category->category_nicename; ?></a>
                                 <?php endforeach; ?> Mar 18, 2020
                             </p>
                             <h2 class="post__title--first"><?php the_title() ?></h2>
