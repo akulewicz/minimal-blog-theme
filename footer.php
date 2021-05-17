@@ -9,19 +9,16 @@
             'container' => 'ul',
             'menu_class' => 'footer-navigation__list'
       )); ?>
-      
+
           </nav>
         </section>
 
         <section class="author">
           <h3 class="footer__title">O mnie</h3>
-          <img class="author__image" src="<?php echo get_theme_file_uri('images/author.png'); ?>" />
-          <p class="author__name">Arkadiusz Kulewicz</p>
+          <?php echo get_avatar(get_the_author_meta('ID'), 128, null, 'Zdjęcie autora bloga', ['class' => 'author__image']); ?>
+          <p class="author__name"><?php echo get_the_author(); ?></p>
           <p class="author__description">
-            Autor bloga poruszeni.pl. Wielbiciel podróży oraz wszelkich form
-            aktywności. W wolnych chwilach stara się coś kodować, czego
-            rezultatem jest ta strona.
-          </p>
+            <?php echo get_the_author_meta('description'); ?>
           <div class="social-links">
             <a href="https://www.facebook.com/poruszeni/" aria-label="Facebook"
               ><i
