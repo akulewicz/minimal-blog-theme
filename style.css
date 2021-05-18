@@ -279,6 +279,7 @@ h6 {
     margin-top: 16px; }
 
 .post__title {
+  font-family: "Roboto Slab", serif;
   color: #303030;
   font-size: 24px;
   font-weight: 500;
@@ -306,11 +307,15 @@ h6 {
     color: #0061A6; }
 
 .post__excerpt {
-  font-family: "Lato", sans-serif;
-  color: #202020;
-  font-size: 16px;
+  font-family: 'Raleway', sans-serif;
+  color: #585656;
+  font-size: 15px;
   font-weight: 300;
   line-height: 1.5; }
+  .post__excerpt--first {
+    font-size: 16px;
+    color: #585656;
+    line-height: 1.5; }
 
 .footer {
   background: #3b3b3b;

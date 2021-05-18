@@ -65,4 +65,12 @@ function minimal_footer_menu_a_class( $atts, $item, $args ) {
 
 add_filter( 'nav_menu_link_attributes', 'minimal_footer_menu_a_class', 1, 3 );
 
+// ------------- POST LIMIT ON PAGED -----------------------
 
+function posts_on_paged( $query ) {
+    if ( $query->is_paged() ) {
+        $query->set( 'posts_per_page', 9 );
+    }
+}
+
+add_action( 'pre_get_posts', 'posts_on_paged' );

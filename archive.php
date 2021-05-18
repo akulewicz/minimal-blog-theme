@@ -2,26 +2,9 @@
 <main class="main">
     <section class="posts posts--js">
 
-        <?php if (have_posts()) : $postCount = 0;
-            while (have_posts()) : $postCount++;
+        <?php if (have_posts()) : while (have_posts()) :
                 the_post(); ?>
-                <?php if ($postCount == 1 && !is_paged()) : ?>
-                    <article class="post--first">
-                        <div class="post__image-box">
-                            <?php the_post_thumbnail('medium-large', array('class' => 'post__image')) ?>
-                        </div>
-                        <div class="post__content--first">
-                            <p class="post__info">
-                                <?php foreach ((get_the_category()) as $category) : ?>
-                                    <a class="post__category--first" href="<?= get_category_link($category->cat_ID); ?>"><?= $category->category_nicename; ?></a>
-                                <?php endforeach; ?> Mar 18, 2020
-                            </p>
-                            <h2 class="post__title--first"><a class="post__hiperlink" href="<?php the_permalink(); ?>"><?php the_title() ?></a></h2>
-                            <div class="post__excerpt--first"><?php echo wp_trim_words(get_the_excerpt(), 30) ?></div>
-                        </div>
-                    </article>
-
-                <?php else : ?>
+            
 
                     <article class="post">
                         <div class="post__image-box">
@@ -38,7 +21,7 @@
                         </div>
                     </article>
 
-                <?php endif; ?>
+    
             <?php endwhile; ?>
             
         <?php endif; ?>
