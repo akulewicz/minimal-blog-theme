@@ -40,9 +40,11 @@
 
                 <?php endif; ?>
             <?php endwhile; ?>
+            
         <?php endif; ?>
 
     </section>
+    <?php the_posts_pagination(array( 'screen_reader_text'=> ' ')); ?>
 </main>
 
 <?php get_footer(); ?>

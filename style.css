@@ -213,6 +213,25 @@ h6 {
   .posts__category {
     grid-area: 1 / -1; }
 
+.pagination {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px; }
+
+.page-numbers {
+  margin: 2px;
+  line-height: 40px;
+  border: 1px solid #003459;
+  color: #003459;
+  padding: 5px 10px;
+  text-decoration: none; }
+
+.current {
+  background-color: #0061A6;
+  color: white; }
+
 .post--first {
   background-color: #f5f5f5;
   grid-column-start: 1;
